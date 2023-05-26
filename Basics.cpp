@@ -21,3 +21,6 @@ g++ filename.cpp -o filenametoexecute
 
 //execute:
 ./filenametoexecute
+
+//input:
+std::cin >> message;
