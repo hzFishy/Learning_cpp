@@ -13,9 +13,8 @@ type name(type input) {
 // Heading (doestn compile if not included)
 #include <iostream>
 
-
 //Print:
-std::cout << "Text \n";
+std::cout << "Text \n"; //from <iostream>
 
 //Compile:
 g++ filename.cpp -o filenametoexecute
