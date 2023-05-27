@@ -32,4 +32,16 @@ std::cin >> message;
 ```
 
 # Variables:
-![](https://prnt.sc/W1po61gLOt3N)
+> Every variable in C++ must be declared before it can be used!
+![](https://img001.prntscr.com/file/img001/blWsh3h6R4u7uI2Q_Jq_Mw.png)
+Synthax:
+```cpp
+// Declare
+int score;
+// Init
+score = 0;
+```
+Or
+```cpp
+int score = 0;
+```
