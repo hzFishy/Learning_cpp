@@ -103,6 +103,7 @@ switch (data) {
 ```
 
 ## Relational operators
+`<`, `>`, `<=`, `>=`, `==`, and `!=`
 
 ## Logical operators
 `&&`: the and logical operator
