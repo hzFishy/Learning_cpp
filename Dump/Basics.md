@@ -65,3 +65,25 @@ type name(type input) {
 }
 ```
 // `type` : `int`, `float`, `char`, etc.), type personnalisé (une classe, une structure) ou  `void` si no return
+
+
+# Conditionals & Logic
+## if, else if, and else statements
+```cpp
+if (condition) {
+
+  //do something
+
+} else {
+
+  //do something else
+
+}
+```
+
+
+## switch
+
+## Relational operators
+
+## Logical operators
