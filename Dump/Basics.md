@@ -68,7 +68,7 @@ type name(type input) {
 
 
 # Conditionals & Logic
-## if, else if, and else statements
+## If, else if, and else statements
 ```cpp
 if (condition) {
 
@@ -81,9 +81,28 @@ if (condition) {
 }
 ```
 
+## Switch
+> must evaluate to an integral type (int, char, short, long, long long, or enum).
 
-## switch
+```cpp
+switch (data) {
+ 
+  case ?:
+    // code
+    break;
+  case ??:
+    // code
+    break;
+  default:
+    // code
+    break;
+ 
+}
+```
 
 ## Relational operators
 
 ## Logical operators
+`&&`: the and logical operator
+`||`: the or logical operator
+`!`: the not logical operator
