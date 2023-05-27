@@ -13,6 +13,10 @@ g++ filename.cpp -o filenametoexecute
 #include <iostream>
 ```
 For inputs & outputs
+```cpp
+#include <vector>
+```
+For using vectors (list)
 
 # Inputs and Outputs (from "iostream")
 ## Output
@@ -59,16 +63,6 @@ Or
 int score = 0;
 ```
 
-# Functions
-```cpp
-type name(type input) {
-    // ...
-    return ...;
-}
-```
-// `type` : `int`, `float`, `char`, etc.), type personnalisé (une classe, une structure) ou  `void` si no return
-
-
 # Conditionals & Logic
 ## If, else if, and else statements
 ```cpp
@@ -109,3 +103,69 @@ switch (data) {
 `&&`: the and logical operator
 `||`: the or logical operator
 `!`: the not logical operator
+
+# Loops
+## While loop
+```cpp
+while (condition){
+ //code
+}
+```
+## For loop
+```cpp
+for (int i = 0; i < 20; i++){
+ //code
+}
+```
+`int i = 0` >> The initialization of a counter
+`i < 20` >> The continue condition
+`i++` >> The change in the counter
+
+
+# Vectors
+*Needs the vector lib*
+## Declaring, initializing & presizing
+> Format for declaring a vector
+```cpp
+std::vector<type> name;
+```
+
+> Format for declaring & initializing a vector
+```cpp
+std::vector<type> name = {e1, e2, ...};
+ ```
+
+> Fromat for presizing
+ ```cpp
+std::vector<type> name(size);
+ ```
+> *when presizing the vector is populated with the defaults values of the `type` (e.g: for doubles 0.0)*
+
+## Indexs
+```cpp
+std::cout << name[index]
+```
+
+## Adding & Removing Elements
+> Adding at the end
+```cpp
+name.push_back(data);
+```
+> Removing at the end
+```cpp
+name.pop_back();
+```
+## Size
+```cpp
+name.size();
+```
+
+# Functions
+```cpp
+return_type function_name( parameters) {
+   // Code block here
+   return output_if_there_is_any;
+ 
+}
+```
+> `type` : `int`, `float`, `char`, ...) or custom type (class, structure) or  `void` if no return
