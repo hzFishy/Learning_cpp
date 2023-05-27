@@ -1,7 +1,9 @@
 
 # Compile & Execute
 ## Compile:
-`g++ filename.cpp -o filenametoexecute`
+```bash
+g++ filename.cpp -o filenametoexecute
+```
 
 ## Execute:
 `./filenametoexecute` or `filenametoexecute.exe`
