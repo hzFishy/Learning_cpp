@@ -20,7 +20,7 @@ g++ filename.cpp -o filenametoexecute
 ```
 For inputs & outputs
 
-# Inputs and Outputs (from <iostream>)
+# Inputs and Outputs (from "iostream")
 ## Output
 ```cpp
 std::cout << "Text \n";
