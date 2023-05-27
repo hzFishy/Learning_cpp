@@ -1,24 +1,32 @@
-//Functions
+# Functions
+```cpp
 type name(type input) {
     // ...
     return ...;
 }
-/*
-- `type` : `int`, `float`, `char`, etc.), type personnalisé (une classe, une structure) ou  `void` si no return
+```
+// `type` : `int`, `float`, `char`, etc.), type personnalisé (une classe, une structure) ou  `void` si no return
 
-*/
-
-//Compile:
+# Compile & Execute
+## Compile:
 g++ filename.cpp -o filenametoexecute
 
-//execute:
-./filenametoexecute
+## Execute:
+`./filenametoexecute` or `filenametoexecute.exe`
 
-// Heading
+# Libs
+```cpp
 #include <iostream>
+```
+For inputs & outputs
 
-//Output:
-std::cout << "Text \n"; //from <iostream>
+# Inputs and Outputs (from <iostream>)
+## Output
+```cpp
+std::cout << "Text \n";
+```
 
-//input:
-std::cin >> message; //from <iostream>
+## Input
+```cpp
+std::cin >> message;
+```
