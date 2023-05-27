@@ -38,7 +38,6 @@ std::string Tree_addLine(){
 void parcourirDossier(const fs::path& dossier) {
     for (const auto& entry : fs::directory_iterator(dossier)) {
         if (fs::is_regular_file(entry)) {
-            // Traitement des fichiers trouvés
 
             std::cout << Tree_addSpace(0)+"||" << Tree_addLine() << entry.path().filename().stem().string() << entry.path().extension().string() << "\n";
         }
@@ -46,7 +45,6 @@ void parcourirDossier(const fs::path& dossier) {
 
     for (const auto& entry : fs::directory_iterator(dossier)) {
         if (fs::is_directory(entry)) {
-            // Appel récursif pour parcourir les sous-dossiers
 
             std::string folderName = entry.path().filename().string();
             std::cout << Tree_addSpace(0)+"|| \n";
@@ -65,6 +63,7 @@ int main() {
     std::cout << "Give path to search: ";
     std::cin >> input;
     fs::path FoldertoCover = input;
+    // enter "./" for current dir
 
     std::cout << "FoldertoCover: [ " << FoldertoCover << " ]\n";
     Tree_start();
