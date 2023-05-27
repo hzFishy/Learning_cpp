@@ -30,3 +30,6 @@ std::cout << "Text \n";
 ```cpp
 std::cin >> message;
 ```
+
+# Variables:
+![](https://content.codecademy.com/courses/learn-cpp/variables/data-types.gif)
