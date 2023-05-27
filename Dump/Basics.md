@@ -32,4 +32,4 @@ std::cin >> message;
 ```
 
 # Variables:
-![](https://content.codecademy.com/courses/learn-cpp/variables/data-types.gif)
+![](https://prnt.sc/W1po61gLOt3N)
