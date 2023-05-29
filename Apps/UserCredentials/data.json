@@ -1,0 +1,10 @@
+{
+    "user1": {
+        "username": "username1",
+        "passwordHash": "passwordHash1"
+    },
+    "user2": {
+        "username": "username2",
+        "passwordHash": "passwordHash2"
+    }
+}
