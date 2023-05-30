@@ -1,5 +1,7 @@
 #include <iostream>
 #include <filesystem>
+#include "../default_functions.h"
+#include <cstdlib>
 
 // Shortcut
 namespace fs = std::filesystem;
@@ -57,8 +59,7 @@ void parcourirDossier(const fs::path& dossier) {
     }
 }
 
-int main() {
-
+void ask(){
     std::string input;
     std::cout << "Give path to search: ";
     std::cin >> input;
@@ -68,11 +69,28 @@ int main() {
     std::cout << "FoldertoCover: [ " << FoldertoCover << " ]\n";
     Tree_start();
     parcourirDossier(FoldertoCover);
+}
 
-    std::cout << "Appuyez sur une touche pour quitter...";
-    std::cin.clear();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::cin.get();
+int main() {
+    std::cout << "Select a choice" << "\n";
+    std::cout << "\t New Tree (n) \t Leave (q)" << "\n";
+    char choice;
+    std::cin >> choice;
+
+    switch (choice)
+    {
+    case 'n':
+        system("cls");
+        ask();
+        main();
+    case 'q':
+        df_closing_app();
+        break;
+    
+    default:
+        df_closing_app();
+        break;
+    }
 
     return 0;
 }
