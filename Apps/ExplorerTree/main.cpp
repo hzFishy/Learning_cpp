@@ -1,13 +1,19 @@
 #include <iostream>
 #include <filesystem>
-#include "../default_functions.h"
+#include "../default_functions.h" //Located in Apps Folder
 #include <cstdlib>
+
+const std::string ANSI_RESET = "\033[Om";
+const std::string ANSI_RED = "\033[31m";
+const std::string ANSI_GREEN = "\033[32m";
+const std::string ANSI_YELLOW = "\033[33m";
+const std::string ANSI_TEST = "\033[34m";
 
 // Shortcut
 namespace fs = std::filesystem;
 
 void Tree_start(){
-    std::cout << "====================================\n";
+    std::cout << ANSI_YELLOW << "====================================\n";
 }
 
 int& Tree_getFolders(){
@@ -49,7 +55,7 @@ void parcourirDossier(const fs::path& dossier) {
         if (fs::is_directory(entry)) {
 
             std::string folderName = entry.path().filename().string();
-            std::cout << Tree_addSpace(0)+"|| \n";
+            std::cout << ANSI_TEST << Tree_addSpace(0)+"|| \n";
             Tree_addFolder(folderName);
 
             parcourirDossier(entry.path());
@@ -61,18 +67,18 @@ void parcourirDossier(const fs::path& dossier) {
 
 void ask(){
     std::string input;
-    std::cout << "Give path to search: ";
+    std::cout << ANSI_RED << "Give path to search: ";
     std::cin >> input;
     fs::path FoldertoCover = input;
     // enter "./" for current dir
 
-    std::cout << "FoldertoCover: [ " << FoldertoCover << " ]\n";
+    std::cout << ANSI_YELLOW << "FoldertoCover: [ " << FoldertoCover << " ]\n";
     Tree_start();
     parcourirDossier(FoldertoCover);
 }
 
 int main() {
-    std::cout << "Select a choice" << "\n";
+    std::cout << ANSI_GREEN << "Select a choice" << "\n";
     std::cout << "\t New Tree (n) \t Leave (q)" << "\n";
     char choice;
     std::cin >> choice;
