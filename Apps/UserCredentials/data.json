@@ -1,10 +1,14 @@
 {
     "user1": {
         "DisplayName": "username1",
-        "passwordHash": "passwordHash1"
+        "password": "passwordHash1"
     },
     "user2": {
         "DisplayName": "username2",
-        "passwordHash": "passwordHash2"
+        "password": "passwordHash2"
+    },
+    "userrr": {
+        "DisplayName": "display",
+        "password": "pass"
     }
 }

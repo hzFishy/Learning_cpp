@@ -3,11 +3,12 @@
 #include "../default_functions.h" //Located in Apps Folder
 #include <cstdlib>
 
+
 const std::string ANSI_RESET = "\033[Om";
 const std::string ANSI_RED = "\033[31m";
 const std::string ANSI_GREEN = "\033[32m";
 const std::string ANSI_YELLOW = "\033[33m";
-const std::string ANSI_TEST = "\033[34m";
+const std::string ANSI_BLUE = "\033[34m";
 
 // Shortcut
 namespace fs = std::filesystem;
@@ -53,9 +54,8 @@ void parcourirDossier(const fs::path& dossier) {
 
     for (const auto& entry : fs::directory_iterator(dossier)) {
         if (fs::is_directory(entry)) {
-
             std::string folderName = entry.path().filename().string();
-            std::cout << ANSI_TEST << Tree_addSpace(0)+"|| \n";
+            std::cout << ANSI_GREEN << Tree_addSpace(0)+"|| \n";
             Tree_addFolder(folderName);
 
             parcourirDossier(entry.path());
@@ -78,8 +78,8 @@ void ask(){
 }
 
 int main() {
-    std::cout << ANSI_GREEN << "Select a choice" << "\n";
-    std::cout << "\t New Tree (n) \t Leave (q)" << "\n";
+    std::cout << ANSI_RED << "Select a choice" << "\n";
+    std::cout << ANSI_RED << "\t New Tree (n) \t Leave (q)" << "\n";
     char choice;
     std::cin >> choice;
 

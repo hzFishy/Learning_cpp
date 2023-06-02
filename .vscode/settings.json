@@ -86,6 +86,9 @@
         "memory_resource": "cpp",
         "string_view": "cpp",
         "cinttypes": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "any": "cpp",
+        "ranges": "cpp",
+        "valarray": "cpp"
     }
 }

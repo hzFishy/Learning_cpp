@@ -169,3 +169,9 @@ return_type function_name( parameters) {
 }
 ```
 > `type` : `int`, `float`, `char`, ...) or custom type (class, structure) or  `void` if no return
+
+
+# Colors:
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, colorID);
+ https://prnt.sc/r_7MtUgiyE5X
