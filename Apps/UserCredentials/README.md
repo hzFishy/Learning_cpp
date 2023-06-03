@@ -7,3 +7,5 @@ __Account has:__
 - a displayname
 
 All info are used from the `data.json` file
+
+When registering the code handles possible user input errors and ask for checking inputed values
