@@ -1,7 +1,8 @@
 #include <iostream>
 #include <stddef.h>
-#include <limits.h>
 #include <windows.h>  // colors
+#include <vector>
+
 int df_closing_app();
 void df_print();
 void setColor(int colorID);
@@ -23,4 +24,13 @@ void df_print(){
 void setColor(int colorID){
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, colorID);
+}
+
+bool isCharInVector(const std::vector<char>& vec, char targetChar) {
+    for (char ch : vec) {
+        if (ch == targetChar) {
+            return true;
+        }
+    }
+    return false;
 }
