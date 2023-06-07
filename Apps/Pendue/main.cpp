@@ -3,6 +3,7 @@
 #include "../default_functions.h" //Located in Apps Folder
 #include <vector>
 #include <random>
+#include <algorithm>
 
 //Tries
 int& getTries(){
@@ -11,19 +12,18 @@ int& getTries(){
 }
 
 void showPendue(){
-    //std::cout << "" << std::endl;
+    std::vector<std::string>  data = {"_|_"," | "," | "," | "," |/","  ___"};
+    
     int tries = getTries();
     setColor(14);
-    std::cout << "tries: " << tries;
-    /*
-    
-    if (tries > 0){
-        std::cout << "=======" << std::endl;
-        if (tries > 1){
-            std::cout << "   ||\n   ||\n   ||\n   ||\n" << std::endl;
+    std::cout << "tries: " << tries << std::endl;
+    if (tries != 0){
+        if (tries < 7){
+            for (int i = tries; i > 0; i--){
+                std::cout << data[i-1] << std::endl;
+            }
         }
     }
-    */
     std::cout << std::endl;
 }
 
@@ -87,29 +87,25 @@ void askUserLetter(std::string word){
         getTries()++;
         getUsedLetters().push_back(ans);
     }
-    //getUsedLetters().push_back()
 }
 
 //Utility
 bool isWordGuessed(std::string word){
     std::vector<char> GuessedLetters = getGuessedLetters();
-    int iterations = 0;
-
-    std::cout << word << std::endl;
-
-    for (char chw : word){
-        for (char chg : GuessedLetters){
-            std::cout << chg << " . " << chw << std::endl;
-            if (chw = chg){
-                iterations++;
-            }
+    std::vector<char> charsWord;
+    for (char ch : word) {
+            charsWord.push_back(ch);
+    }
+    
+    bool letterFound = false;
+    for (char ch_cw : charsWord){
+        auto it = std::find(GuessedLetters.begin(), GuessedLetters.end(), ch_cw);
+        if (it == GuessedLetters.end()){
+            return false;
         }
     }
-    if (iterations == word.size()){
-        return true;
-    } else {
-        return false;
-    }
+    return true;
+    
 }
 
 //Start
@@ -145,10 +141,9 @@ std::string getRandomWord(){
 
 void newRound(std::string word){
     
-    while (!isWordGuessed(word)){
-        setColor(11);
-        std::cout << "====================================\n"; //clear screen
-        showPendue(); // finish dessin
+    if (!isWordGuessed(word)){
+        system("cls");
+        showPendue();
         showUsedLetters();
         std::cout << std::endl;
         showGuessingWord(word);
@@ -159,7 +154,6 @@ void newRound(std::string word){
     }
     setColor(10);
     std::cout << "you won ! " << std::endl;
-    
 }
 
 void newGame(){
