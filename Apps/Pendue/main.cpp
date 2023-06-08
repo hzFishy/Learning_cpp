@@ -151,9 +151,11 @@ void newRound(std::string word){
         askUserLetter(word);
 
         newRound(word);
+    } else {
+        setColor(10);
+        std::cout << "you won ! " << std::endl;
     }
-    setColor(10);
-    std::cout << "you won ! " << std::endl;
+    
 }
 
 void newGame(){
