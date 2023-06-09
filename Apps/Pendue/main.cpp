@@ -154,6 +154,7 @@ void newRound(std::string word){
     } else {
         setColor(10);
         std::cout << "you won ! " << std::endl;
+        std::cout << "The word was: " << word << std::endl;
     }
     
 }
