@@ -9,5 +9,5 @@
 
 ## MatrixWall
 <p align="center">
-    <img src="./demo/demo_config.gif", width="800">
+    <img src="./demo/demo_WallOfIllusions_MatrixWall.gif", width="800">
 </p>
