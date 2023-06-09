@@ -4,10 +4,10 @@
 
 ## Config Demo:
 <p align="center">
-    <img src="./demo/demo_config.gif">
+    <img src="./demo/demo_config.gif, width="700">
 </p>
 
 ## MatrixWall
 <p align="center">
-    <img src="./demo/demo_config.gif">
+    <img src="./demo/demo_config.gif, width="700">
 </p>
