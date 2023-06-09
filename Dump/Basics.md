@@ -175,3 +175,45 @@ return_type function_name( parameters) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, colorID);
  https://prnt.sc/r_7MtUgiyE5X
+
+
+ # Class
+ Example code:
+ ```cpp
+ #include <iostream>
+#include <string>
+
+class Car {
+private:
+    std::string make;
+    std::string model;
+    int year;
+    
+public:
+    Car(const std::string& make, const std::string& model, int year) {
+        this->make = make;
+        this->model = model;
+        this->year = year;
+    }
+    
+    void drive() {
+        std::cout << "Driving the " << year << " " << make << " " << model << std::endl;
+    }
+    
+    void honk() {
+        std::cout << "Honk honk!" << std::endl;
+    }
+};
+
+int main() {
+    // Création d'une instance de la classe Car
+    Car myCar("Toyota", "Camry", 2022);
+    
+    // Utilisation des méthodes de la classe Car
+    myCar.drive();
+    myCar.honk();
+    
+    return 0;
+}
+
+ ```
