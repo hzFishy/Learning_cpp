@@ -113,7 +113,7 @@ bool isWordGuessed(std::string word){
 void newGame();
 
 void start(){
-    std::cout << "Start ? \n> ";
+    std::cout << "Start new game ? \n> ";
     char ans;
     std::cin >> ans;
     switch (ans)
@@ -155,8 +155,9 @@ void newRound(std::string word){
         setColor(10);
         std::cout << "you won ! " << std::endl;
         std::cout << "The word was: " << word << std::endl;
+        start();
     }
-    
+
 }
 
 void newGame(){
