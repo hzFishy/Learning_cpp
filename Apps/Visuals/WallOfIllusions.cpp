@@ -72,6 +72,9 @@ void pre_Continuous(double delay_seconds, int ColorID){
 }
 
 double editSpeed(){
+    setColor(15);
+    std::cout << "======================================" << std::endl;
+    setColor(14);
     std::cout << "Custom (0)" << std::endl;
     std::cout << "Known cases: \t Matrix Wall: 0.001 (1) \t Storm: 0.00001 (2)" << std::endl;
     std::cout << "> ";
@@ -99,6 +102,9 @@ double editSpeed(){
 }
 
 int editColor(){
+    setColor(15);
+    std::cout << "======================================" << std::endl;
+    setColor(14);
     std::cout << "Custom (0)" << std::endl;
     std::cout << "Known cases: \t RandomSingle (1) \t RandomMultiple (2)" << std::endl;
     std::cout << "> ";
